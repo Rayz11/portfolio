@@ -1,0 +1,238 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+}
+body{
+    background: #080808;
+    color: white;
+}
+#header{
+    width: 100%;
+    height: 100vh;
+    background-image:url(images/images.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+.container{
+    padding:10px 10% ;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.logo{
+    width: 120px;
+
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+nav ul li a::after{
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+
+}
+.header-text{
+    margin: 5%;
+    font-size: 30px;
+}
+.header-text h1{
+    font-size: 40px;
+    margin-top: 20px;
+}
+.header-text h1 span{
+    color: #ff004f;
+}
+.row1{
+    display: flex;
+}
+.row1 img{
+    padding-left: 50px;
+    width:400px;
+    height: 300px;
+}
+.animation::after{
+    content: "UI/UX Designer";
+    animation:filter 5s infinite;
+    display: inline-block;
+
+}
+@keyframes filter{
+0%,
+10%{
+    content: "UI/UX Designer";
+    color: #ff004f;
+}
+20%,
+21%{
+    content: 'Web Developer';
+    color: #ff004f;
+}
+40%,
+41%{
+    content: "Front-End Developer";
+     color: #ff004f
+}
+60%,
+61%{
+    content: "Back-End Developer";
+     color: #ff004f
+}
+80%,
+81%{
+    content: "Full-Stack Developer";
+     color: #ff004f
+}99%,
+100%{
+    content: "Web Designer";
+     color: #ff004f
+}
+}
+#about{
+    padding: 80px 0;
+    color: #ababab;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about-col-1{
+    flex-basis: 35%;
+}
+.about-col-1 img{
+    width: 100%;
+    border-radius: 15px;
+}
+.about-col-2{
+   flex-basis: 60%;
+
+}
+.sub-title{
+    font-size: 40px;
+    color: #fff;
+    font-weight: 400;
+}
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+.tab-links{
+    margin-right: 50px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 18px;
+    position: relative;
+}
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+.tab-links.active-link::after{
+    width: 50%;
+}
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+
+.tab-contents ul li span{
+    color: #b54560;
+    font-size: 14px;
+}
+.tab-contents{
+    display:none;
+}
+.tab-contents.active-tab{
+    display:block;
+}
+#services{
+    padding: 30px 0;
+}
+.services-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,2fr));
+    grid-gap:40px;
+    margin-top: 30px;
+}
+.services-list div{
+    background: #262626;
+    padding: 48px 0;
+    font-size: 2px;
+    font-weight: 200;
+    border-radius: 10px;
+    transition:background 0.5s, transform 0.5s;
+    max-height:fit-content;
+}
+.services-list div i{
+    font-size: 30px;
+    margin-bottom: 10px;
+
+}
+.services-list div h2{
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.services-list div a{
+    text-decoration: none;
+    color:#0000ff;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+
+}
+.services-list div a:hover{
+    color: #0000ff;
+}
+.services-list div:hover{
+    background: #ff004f;
+    transform: translateY(-10px);
+}
+#portfolio{
+    padding: 50px;
+}
+.work-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,2fr));
+    grid-gap:40px;
+    margin-top: 30px;
+}
+.work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.work img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+}
+

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/3acde216ab.js" crossorigin="anonymous"></script>
+</head>
+<body>
+   <div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/kennedy logo.png" class="logo">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p class="animation"></p>
+            <h1>Hi, I'm <span>Kennedy </span><br> Kioko from Kenya</h1>
+        </div>
+    </div>
+   </div> 
+
+   <div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/Rayz.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About me</h1>
+                <p>I’m a third-year Computer Science student at Kibabii University, passionate about web development and problem-solving. I enjoy creating efficient backend systems and beautiful frontend experiences. Currently seeking opportunities in software development and internships to grow my practical skills.</p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li>UI/UX Design <span><br>Designing Web/App interfaces</span></li>
+                         <li>Web Development <span><br>Web app development</span></li>
+                          <li>App Development <span><br>Building Android Apps</span></li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li>2025<span><br>Internship at University of Nairobi,Cheromo</span></li>
+                         <li>2024 <span><br>UI/UX Design Executive at ET institute</span></li>
+                          <li>2023<span><br>Web Development in University of Nairobi</span></li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li>2026-present<span><br>Masters in Computer Science,Harvard University</span></li>
+                         <li>2022-2026<span><br>Bachelor Degree in Computer Science,Kibabii University</span></li>
+                          <li>2018-2021<span><br>Kenya Certificate of Secondary Education,Kitui High School</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+   </div>
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                <i class="fa-solid fa-code"></i>
+                 <h2>Web Design</h2>   
+                 <p>Web design is the process of planning, arranging, and creating the visual layout and user experience of a website, combining aesthetics with functionality. It involves elements like colors, fonts, images, and navigation, all designed to deliver a clear and engaging experience for users across various devices. </p>
+                 <a href="https://www.google.com/search?q=web+design&rlz=1C1GCEU_enKE1160KE1160&oq=web+design&gs_lcrp=EgZjaHJvbWUyFQgAEEUYORiRAhixAxjJAxiABBiKBTINCAEQABiRAhiABBiKBTIKCAIQABiSAxiABDINCAMQABiRAhiABBiKBTIMCAQQABhDGIAEGIoFMgwIBRAAGEMYgAQYigUyBwgGEAAYgAQyBggHEEUYPdIBCDU2ODlqMGo3qAIIsAIB8QVI3JEEqMQyE_EFSNyRBKjEMhM&sourceid=chrome&ie=UTF-8">Learn more</a>
+                </div>
+                 <div>
+                 <i class="fa-solid fa-crop"></i>
+                 <h2>UI/UX Design</h2>   
+                 <p>UI/UX design, short for User Interface/User Experience design, focuses on creating intuitive, user-friendly, and visually appealing digital products and services. It encompasses both the visual aesthetics of the interface (UI) and the overall experience of interacting with the product (UX).</p>
+                 <a href="https://www.google.com/search?q=ui%2Fux+design&sca_esv=736105c503770b85&rlz=1C1GCEU_enKE1160KE1160&sxsrf=AE3TifOnwmXh9YSwmpKgNGMptq1ELJjEOA%3A1748934353312&ei=0Z4-aL_hEoWTkdUPg6W1kAU&oq=ui%2Fux&gs_lp=Egxnd3Mtd2l6LXNlcnAiBXVpL3V4KgIIADILEAAYgAQYkQIYigUyCxAAGIAEGJECGIoFMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgARIgjFQwQVY8yBwAngBkAEEmAHfAqABqBWqAQUyLTcuM7gBAcgBAPgBAZgCCKAC0A-oAgrCAgoQABiwAxjWBBhHwgINEAAYgAQYsAMYQxiKBcICChAjGIAEGCcYigXCAggQABiABBiSA8ICChAAGIAEGEMYigXCAgcQIxgnGOoCwgINEC4Y0QMYxwEYJxjqAsICDRAAGIAEGLEDGEMYigXCAggQLhiABBixA8ICCBAAGIAEGLEDwgIUEC4YgAQYsQMY0QMYgwEYxwEYigXCAgsQLhiABBixAxiDAcICFhAuGIAEGLEDGNEDGEMYgwEYxwEYigXCAgoQABiABBgUGIcCmANP8QX9p1DpppLyn4gGAZAGCpIHBzEuMS41LjGgB65KsgcFMi01LjG4B74NwgcJMy0yLjMuMi4xyAeNAw&sclient=gws-wiz-serp">Learn more</a>
+                </div>
+                 <div>
+                <i class="fa-brands fa-app-store-ios"></i>
+                 <h2>App Design</h2>   
+                 <p>App design encompasses the visual and interactive aspects of a mobile application, focusing on creating an intuitive and user-friendly interface. It involves carefully crafting the layout, navigation, and visual elements to enhance the user experience.</p>
+                 <a href="https://www.google.com/search?q=app+design&sca_esv=736105c503770b85&rlz=1C1GCEU_enKE1160KE1160&sxsrf=AE3TifOz-fnDENAyDYVxLtKZ7ttyV1A4Ow%3A1748934458923&ei=Op8-aLmOOMmRxc8PjrL02Ao&oq=app&gs_lp=Egxnd3Mtd2l6LXNlcnAiA2FwcCoCCAEyCxAAGIAEGJECGIoFMgsQABiABBiRAhiKBTIZEC4YgAQYsQMY0QMYQxiDARjHARjJAxiKBTINEAAYgAQYsQMYQxiKBTIKEAAYgAQYQxiKBTIKEAAYgAQYQxiKBTIKEAAYgAQYQxiKBTILEAAYgAQYkgMYigUyCBAAGIAEGLEDMggQABiABBixA0i9LVCfBliAFXACeAGQAQSYAfIDoAGuGaoBBzItMi4yLjS4AQHIAQD4AQGYAgagAoQMqAIKwgIKEAAYsAMY1gQYR8ICChAjGIAEGCcYigXCAgUQABiABMICBxAjGCcY6gLCAggQLhiABBixA8ICCxAAGIAEGLEDGIMBwgIOEAAYgAQYsQMYgwEYigXCAhYQLhiABBixAxjRAxhDGIMBGMcBGIoFmAM88QWGUNnxEMHLlogGAZAGCJIHBTIuMy00oAfmQ7IHAzMtNLgHjAvCBwczLTEuMi4zyAfWAQ&sclient=gws-wiz-serp">Learn more</a>
+                </div>
+            </div>
+    </div>
+</div>
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Projects</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/Ecommerce.png">
+                <div class="layer">
+                    <h1>E-Commerce Shopping Website</h1>
+                    <p>A shopping Website aimed to ensure Customers purchase products online and for efficient goods delivery</p>
+                    <a href="https://github.com/Rayz11/Index"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+              <div class="work">
+                <img src="images/portal.png">
+                <div class="layer">
+                    <h1>Job-portal website</h1>
+                    <p> modern web-based job portal designed to connect job seekers, employers, and administrators in a streamlined platform. The focus is on night shift jobs, helping users find opportunities that suit their unique schedules.</p>
+                    <a href="https://github.com/Rayz11/PROJECT-1"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+              <div class="work">
+                <img src="images/AMS.png">
+                <div class="layer">
+                    <h1>Facial recognition Attendance system.</h1>
+                    <p>The system is designed to track attendance and also enable lectures or employer to take down the attendance sheet.</p>
+                    <a href="https://github.com/Rayz11/Project1-Ams-system"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+   <script>
+    var tablinks=document.getElementsByClassName("tab-links");
+     var tabcontents=document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+         for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+   </script>
+</body>
+</html>
