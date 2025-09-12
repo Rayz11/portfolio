@@ -446,6 +446,66 @@ footer {
     transform: scale(1.15) rotate(-6deg);
 }
 
+/* Modal background */
+.modal {
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(34,37,38,0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Modal content box */
+.modal-content {
+    background: linear-gradient(135deg, #232526 0%, #007bff 100%);
+    padding: 36px 28px;
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(0,123,255,0.18);
+    max-width: 370px;
+    width: 100%;
+    position: relative;
+    text-align: center;
+    color: #fff;
+    animation: fadeInModal 0.3s;
+}
+
+/* Close button */
+.close {
+    position: absolute;
+    top: 18px;
+    right: 22px;
+    font-size: 28px;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+.close:hover {
+    color: #007bff;
+}
+
+/* PayPal button image styling */
+.modal-content form input[type="image"] {
+    margin-top: 24px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,123,255,0.12);
+    transition: transform 0.2s;
+}
+.modal-content form input[type="image"]:hover {
+    transform: scale(1.05);
+}
+
+/* Modal animation */
+@keyframes fadeInModal {
+    from { transform: scale(0.95); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
 /* Responsive */
 @media (max-width: 900px) {
     .row { flex-direction: column; gap: 20px; }

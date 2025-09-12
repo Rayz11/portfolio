@@ -47,4 +47,50 @@ document.querySelectorAll('nav ul li a[href^="#"]').forEach(link => {
         const target = document.querySelector(this.getAttribute('href'));
         if (target) target.scrollIntoView({ behavior: 'smooth' });
     });
+    
+});
+
+// Mpesa Modal Logic (Pesapal)
+document.addEventListener('DOMContentLoaded', function() {
+    var mpesaBtn = document.getElementById('mpesaBtn');
+    var mpesaModal = document.getElementById('mpesaModal');
+    var closeModal = document.getElementById('closeModal');
+    var mpesaForm = document.getElementById('mpesaForm');
+    var mpesaStatus = document.getElementById('mpesaStatus');
+
+    mpesaBtn.addEventListener('click', function() {
+        mpesaModal.style.display = 'flex';
+        mpesaStatus.textContent = '';
+    });
+    closeModal.addEventListener('click', function() {
+        mpesaModal.style.display = 'none';
+    });
+    window.onclick = function(event) {
+        if (event.target == mpesaModal) {
+            mpesaModal.style.display = 'none';
+        }
+    }
+
+    mpesaForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        mpesaStatus.textContent = 'Processing payment...';
+        var phone = document.getElementById('phone').value;
+        var amount = document.getElementById('amount').value;
+        fetch('mpesa_pay.php', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: 'phone=' + encodeURIComponent(phone) + '&amount=' + encodeURIComponent(amount)
+        })
+        .then(response => response.json())
+        .then(data => {
+            if(data.success && data.redirect_url){
+                window.location.href = data.redirect_url;
+            }else{
+                mpesaStatus.textContent = 'Error: ' + (data.message || 'Failed to send payment request.');
+            }
+        })
+        .catch(() => {
+            mpesaStatus.textContent = 'Network error. Please try again.';
+        });
+    });
 });
