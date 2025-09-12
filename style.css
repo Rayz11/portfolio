@@ -348,6 +348,30 @@ nav ul li a.active {
     color: #007bff;
     transform: translateY(-2px) scale(1.04);
 }
+.btn-downloadcv {
+    background: linear-gradient(90deg, #28a745 60%, #007bff 100%);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 28px;
+    font-size: 18px;
+    font-weight: 600;
+    margin-left: 10px;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(40,167,69,0.12);
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+.btn-downloadcv i {
+    font-size: 20px;
+}
+.btn-downloadcv:hover {
+    background: linear-gradient(90deg, #218838 60%, #0056b3 100%);
+    color: #fff;
+    box-shadow: 0 4px 16px rgba(40,167,69,0.18);
+}
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
