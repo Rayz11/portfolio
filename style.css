@@ -576,4 +576,13 @@ footer {
     color: #485563;
     transform: scale(1.15) rotate(-6deg);
 }
+.social-links a[title="YouTube"] i,
+.footer-social a[title="YouTube"] i {
+    color: #ff0000;
+    transition: color 0.3s;
+}
+.social-links a[title="YouTube"]:hover i,
+.footer-social a[title="YouTube"]:hover i {
+    color: #c4302b;
+}
 
