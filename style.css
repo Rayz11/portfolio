@@ -630,28 +630,116 @@ footer {
         font-size: 15px;
     }
 }
-.social-links {
-    margin-top: 18px;
+
+/* Responsive improvements */
+:root{
+    --max-width: 1100px;
+    --gap: 24px;
+}
+
+/* Container centralised with side padding */
+.container{
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+/* Make nav wrap and be touch-friendly on small screens */
+nav ul{
     display: flex;
-    gap: 18px;
-    justify-content: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
 }
-.social-links a {
-    color: #007bff;
-    font-size: 28px;
-    transition: color 0.3s, transform 0.3s;
+nav ul li a{
+    padding: 8px 10px;
+    display: inline-block;
+    font-size: 15px;
 }
-.social-links a:hover {
-    color: #485563;
-    transform: scale(1.15) rotate(-6deg);
+
+/* Header hero responsive tweaks */
+.header-hero{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 28px 0;
+    flex-wrap: nowrap;
 }
-.social-links a[title="YouTube"] i,
-.footer-social a[title="YouTube"] i {
-    color: #ff0000;
-    transition: color 0.3s;
+
+/* allow hero to stack on smaller screens */
+@media (max-width: 900px){
+    .header-hero{
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+        padding: 20px 0;
+    }
+    .hero-content { order: 2; text-align: center; }
+    .hero-image { order: 1; }
+    .hero-image img {
+        width: 200px !important;
+        height: 200px !important;
+        border-radius: 50%;
+    }
+    .header-text h1 { font-size: 1.8rem; }
+    .header-text p { max-width: 100%; font-size: 15px; }
+    .hero-content .header-buttons { width: 100%; display:flex; flex-direction:column; gap:12px; align-items:center; }
+    .hero-content .header-buttons a,
+    .hero-content .header-buttons button { width: 100%; max-width: 320px; }
+    nav ul { justify-content: center; }
 }
-.social-links a[title="YouTube"]:hover i,
-.footer-social a[title="YouTube"]:hover i {
-    color: #c4302b;
+
+/* Mobile specific */
+@media (max-width: 600px){
+    nav ul li a { font-size: 14px; padding: 8px; }
+    .header-text h1 { font-size: 1.5rem; }
+    .hero-image img {
+        width: 160px !important;
+        height: 160px !important;
+    }
+    .work-list { gap: 12px; }
+    .work { width: 100%; }
+    .about-col-1 img, .row1 img { max-width: 100%; height: auto; display:block; margin: 0 auto; }
+    .footer-social { gap: 12px; flex-wrap:wrap; justify-content:center; }
 }
+
+/* Projects grid -> responsive columns */
+.work-list{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+@media (max-width: 1000px){
+    .work-list{ grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px){
+    .work-list{ grid-template-columns: 1fr; }
+}
+
+/* Contact form full width on mobile */
+.contact-container form input,
+.contact-container form textarea,
+.contact-container form button{
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* small improvements: touch target sizes */
+.btn-hireme, .btn-callme, .btn-downloadcv, .paypal-btn {
+    padding: 12px 18px;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+/* ensure modal centers on small devices */
+.modal { align-items: center; justify-content: center; padding: 20px; }
+.modal-content { max-width: 420px; width: 100%; }
+
+/* keep footer readable */
+footer { padding: 28px 16px; }
+.footer-content p { font-size: 14px; }
 
